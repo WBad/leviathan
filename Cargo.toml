@@ -1,0 +1,27 @@
+[package]
+name = "leviathan"
+version = "0.1.0"
+edition = "2021"
+readme = "README.md"
+
+[[test]]
+name = "main"
+harness = false # allows Cucumber to print output instead of libtest
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+base64 = "0.13.0"
+chrono = { version = "0.4", features = ["serde"] }
+hmac = "0.12.1"
+read_input = "0.8"
+reqwest = { version = "0.11.9", features = ["blocking"] }
+serde = { version = "1.0.136", features = ["derive"] }
+serde_json = "1.0.79"
+sha2 = "0.10.2"
+url = "2.2.2"
+
+[dev-dependencies]
+async-trait = "0.1.52"
+cucumber = "0.12.1"
+tokio = { version = "1.17.0", features = ["macros", "rt-multi-thread", "time"] }
